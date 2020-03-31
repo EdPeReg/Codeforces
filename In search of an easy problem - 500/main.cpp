@@ -1,3 +1,7 @@
+/* I decided to have a flag (f) to know when it's going to be HARD
+ * or not, it should be initialized, if you don't know, when the answer
+ * is EASY, f will have value garbage. */
+
 #include <iostream>
 
 int main() {
