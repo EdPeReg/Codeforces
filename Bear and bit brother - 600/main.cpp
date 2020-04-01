@@ -12,7 +12,6 @@ int main() {
 			break;
 		}
 		year++;
-
 	}
 
 	return 0;
