@@ -1,10 +1,14 @@
 //https://codeforces.com/problemset/problem/785/A
 
+/* Something quickly, you can do it using the first character
+ * of the word, because there is not more other caracters repeated, 
+ * if there were a string where its first character is repeated, this doesn't
+ * would not work; For me, not efficient. */
+
 #include <iostream>
 #include <string>
 
 int main() {
-	std::string tetra, cube, octa, dode, ico;
 	std::string str;
 	int n, total = 0;
 	std::cin >> n;
