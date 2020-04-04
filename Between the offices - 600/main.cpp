@@ -10,10 +10,10 @@ int main() {
 	for(size_t i(0); i < str.size() - 1; i++) {
 		if(str[i] == 'F' and str[i] != str[i + 1]) FtoS++;
 		if(str[i] == 'S' and str[i] != str[i + 1]) StoF++;
-	}
 
-	if(FtoS == StoF) std::cout << "NO\n";
-	else std::cout << "YES\n";
+	//if(FtoS == StoF) std::cout << "NO\n";
+	if(StoF > FtoS) std::cout << "YES\n";
+	else std::cout << "NO\n";
 
 	return 0;
 }
