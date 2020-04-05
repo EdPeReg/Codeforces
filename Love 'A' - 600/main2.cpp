@@ -1,5 +1,7 @@
 //https://codeforces.com/problemset/problem/1146/A
 
+// not completed.
+
 #include <iostream>
 #include <string>
 
@@ -17,6 +19,9 @@ int main() {
 		}
 	}
 	
+	std::cout << "no a: " << noA << "\n";
+	std::cout << "a: " << a << "\n";
+
 	if(noA > a) {
 		std::cout << a + 1;
 	} else if(noA == a) {
