@@ -17,11 +17,16 @@ int main() {
 		}
 	}
 	
-	for(size_t i(0); i < str.size(); i++) {
-		if(noA >= a) { 
-			str.erase(i,1);
+	int j = 0;
+	while(true) {
+		if(noA >= a and str[j] != 'a') { 
+			str.erase(j,1);
+			std::cout << "str: " << str << "\n";
 			noA--;
+		} else {
+			j++;
 		}
+		if(noA == 0 or noA < a) break;
 	}
 
 	std::cout << str.size();
