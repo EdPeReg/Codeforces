@@ -13,6 +13,7 @@
  * to do str.size() - 1 and str.size() - 2, to be able to have the 
  * correct characters. */
 
+
 #include <iostream>
 #include <string>
 
