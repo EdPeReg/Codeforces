@@ -4,6 +4,7 @@
  * if the number of participants are equal or greater than pencials
  * and notebooks, that means there are enough notebooks and pencils. */
 
+
 #include <iostream> 
 
 int main() {
