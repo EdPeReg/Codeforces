@@ -27,6 +27,5 @@ int main() {
 
 	if(StoF > FtoS) std::cout << "YES\n";
 	else std::cout << "NO\n";
-
 	return 0;
 }
