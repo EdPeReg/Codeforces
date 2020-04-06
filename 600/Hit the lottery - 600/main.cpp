@@ -11,6 +11,7 @@
  * 20 * 2 = 40, because I have to bills of 20, I have in total 40
  * 43 - 40 = 3, now I have this left. */
 
+
 #include <iostream>
 
 int main() {
