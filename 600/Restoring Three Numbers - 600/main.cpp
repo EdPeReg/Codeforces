@@ -21,6 +21,7 @@
 #include <iostream>
 #include <algorithm>
 
+
 int main() {
 	int vect[4];
 	int a, b, c, d;
