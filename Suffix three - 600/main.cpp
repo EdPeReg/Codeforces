@@ -32,24 +32,15 @@ int main() {
 		std::string str;
 		std::cin >> str; 
 
-		for(size_t i(str.size()); i > 0; i--) {
-			if(str[i] == 'o' and str[i - 1] == 'p') {
-				std::cout << "FILIPINO\n";
-			   	break;
-			}
-			if(str[i] == 'e' and str[i - 1] == 'd') {
-				std::cout << "JAPANESE\n";
-			   	break;
+		if(str[str.size() - 1] == 'o' and str[str.size() - 2] == 'p') {
+			std::cout << "FILIPINO\n";
+		}
+		if(str[str.size() - 1] == 'u' and str[str.size() - 2] == 's') {
+			std::cout << "JAPANESE\n";
 
-			} 			
-			if(str[i] == 'a' and str[i - 1] == 'm') {
-				std::cout << "JAPANESE\n";
-			   	break;
-			}
-			if(str[i] == 'n' and str[i - 1] == 'm') { 
-				std::cout << "KOREAN\n";   
-				break;
-			} 
+		} 			
+		if(str[str.size() - 1] == 'a' and str[str.size() - 2] == 'd') { 
+			std::cout << "KOREAN\n";   
 		}
 	}
 
