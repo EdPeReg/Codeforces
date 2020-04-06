@@ -3,7 +3,6 @@
 /* Not completed
  * */
 
-
 /* A case it's also when there are only a. */
 
 #include <iostream>
