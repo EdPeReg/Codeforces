@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+
 int main() {
 	int n, m, q;
 	std::vector<std::string> str1;
