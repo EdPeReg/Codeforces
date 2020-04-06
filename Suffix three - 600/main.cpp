@@ -1,25 +1,17 @@
 // https://codeforces.com/problemset/problem/1281/A
 
-/* Well, because I'm interested on check the last letters of the string, I start
- * iterating from back to front.
- * Also I see what makes unique the suffices, for Filipino you have a 'p' followed by a 'o'
- * Japanese, 'd' followed by 'e', 'm' followed by a 'a'.
- * Korean, 'm' followed by a 'n'.
- *
- * Having this, is not necessary to check every letter, you only check two letters.
- *
- * But because I'm iterating from back to front, I need to check those letters backwards.
- * Also I have a break because once I check the two letters, I don't want to continue analizing
+/* I only need to check the last two letters of the string, doing this, is not necessary to iterate
  * all the string.
- * The str[i - 1] is neccesarry to check the next letter.
  *
- * Example:
- * 
- * kamusta_po 
- *         ^ ^
- *         | |
- * */
-
+ * for each suffixes you check:
+ * Filipino: 'o', 'p'
+ * Japanese: 'u', 's'
+ * Korean:   'a', 'd'
+ *
+ * Is important to notice that the order is backwards. 
+ * Because I'm only checking two letters in the string, is necessary
+ * to do str.size() - 1 and str.size() - 2, to be able to have the 
+ * correct characters. */
 
 #include <iostream>
 #include <string>
