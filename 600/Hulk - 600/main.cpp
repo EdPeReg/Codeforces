@@ -4,6 +4,7 @@
  * that when it's even that word "i love" it's added, when it's odd
  * the word "I hate" it's added. */
 
+
 #include <iostream>
 #include <string>
 
