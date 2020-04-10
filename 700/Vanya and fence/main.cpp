@@ -1,3 +1,10 @@
+//https://codeforces.com/problemset/problem/677/A
+
+/* 
+ * You only need to check if each person should bend or not, depending 
+ * of the fence height.
+ * */
+
 #include <iostream>
 
 using namespace std;
