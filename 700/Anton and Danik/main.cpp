@@ -1,3 +1,7 @@
+//https://codeforces.com/problemset/problem/734/A
+
+/* Just try to know how many letters Anton has and how many letters Danik has.*/
+
 #include <iostream>
 #include <string>
 
