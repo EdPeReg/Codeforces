@@ -17,25 +17,29 @@ using namespace std;
 
 int main() {
 	int total = 0;
-	string str1, str2;
+	string str1, str2, str3, str4, str5;
+	getline(cin, str2, ' ');
+	getline(cin, str3, ' ');
+	getline(cin, str4, ' ');
+	getline(cin, str5);
 	getline(cin, str1);
-	getline(cin, str2);
 
-	// Works only if the test case is like this:
-	// 1 5 4 1
-	// Not 1234 6431 2346 1254
-	for(size_t i(0); i < str2.size(); i++) {
-		if(str2.at(i) == '1') {
-			total += (str1.at(0) - 48);				
+	for(size_t i(0); i < str1.size(); i++) {
+		if(str1.at(i) == '1') {
+			int aux = stoi(str2);
+			total += aux;
 		}
-		if(str2.at(i) == '2') {
-			total += (str1.at(2) - 48);				
+		if(str1.at(i) == '2') {
+			int aux = stoi(str3);
+			total += aux;
 		}
-		if(str2.at(i) == '3') {
-			total += (str1.at(4) - 48);				
+		if(str1.at(i) == '3') {
+			int aux = stoi(str4);
+			total += aux;				
 		}
-		if(str2.at(i) == '4') {
-			total += (str1.at(6) - 48);				
+		if(str1.at(i) == '4') {
+			int aux = stoi(str5);
+			total += aux;
 		}
 	}
 	cout << total << "\n";
