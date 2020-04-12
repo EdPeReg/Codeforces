@@ -2,6 +2,9 @@
 
 using namespace std;
 
+// XX|X0
+// 0X|00
+
 int main() {
 	bool flag = false;
 	int n;
@@ -18,7 +21,7 @@ int main() {
 	}
 	for(int i = 0; i < n; i++) {
 		for(int j = 0; j < 5; j++) {
-			if(matrix[i][j] == 'O' and matrix[i][j + 1] == 'O') {
+			if(matrix[i][j] == 'O' and matrix[i][j + 1] == 'O' and j != 4) {
 				cout << "YES";
 				flag = true;
 				matrix[i][j] = '+';
