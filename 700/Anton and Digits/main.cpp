@@ -7,10 +7,11 @@ int main() {
 	int min = 0, total = 0;
 	cin >> dig2 >> dig3 >> dig5 >> dig6;
 
-	min = dig2;
-	if(dig2 > dig5) {
+	if(dig2 <= dig5 and dig2 <= dig6) {
+		min = dig2;
+	} else if(dig5 <= dig2 and dig5 <= dig6) {
 		min = dig5;
-	} else if(dig2 > dig6) {
+	} else {
 		min = dig6;
 	}
 	total = 256 * min;
