@@ -1,3 +1,10 @@
+// https://codeforces.com/problemset/problem/1325/B
+// Time: 34 min.
+
+/* Well I didn't unserdtand completelly the logic, but I saw that the array
+ * eliminates the repeteaded elements and sort it, that corresponds to a set.
+ * I cleared the set because it has the previous elements. */
+
 #include <iostream>
 #include <set>
 
