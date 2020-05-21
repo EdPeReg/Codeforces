@@ -1,3 +1,7 @@
+// https://codeforces.com/problemset/problem/110/A
+// Time: 36 min.
+// Second try.
+
 #include <iostream>
 #include <string>
 
