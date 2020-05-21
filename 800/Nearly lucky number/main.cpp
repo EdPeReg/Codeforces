@@ -1,29 +1,30 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main() {
-	int n, r;
-	bool t;
+	bool isFour = false, isSeven = false;
+	string n;
 	cin >> n;
 
-	r = n % 10;
-	n = n / 10;
-	while(r == 7 or r == 4) {
-		r = n % 10;
-		n = n / 10;
-		t = true;
-
-		if(n == 0) {
-			t = false;	
+	for(int i = 0; i < n.size(); i++) {
+		if(n.at(i) == '4') { 
+			isFour = true; 
+			continue;
 		}
-			
+		if(n.at(i) == '7') { 
+			isSeven = true;
+		    continue;	
+		}
+		break;
 	}
 
-	if(t) 
-		cout << "NO\n";
-	else
+	if(isFour and isSeven) {
 		cout << "YES\n";
+	} else {
+		cout << "NO\n";
+	}
 
 	return 0;
 }
