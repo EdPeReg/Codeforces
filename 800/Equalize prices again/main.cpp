@@ -1,3 +1,6 @@
+// https://codeforces.com/contest/1234/problem/A
+// Time: 30 min.
+
 #include <iostream>
 
 using namespace std;
@@ -16,10 +19,14 @@ int main() {
 			total += p;
 		}
 
-		if(total % n == 0) {
-			cout << total / n << "\n";
-		} else if(total % n != 0) {
-			cout << total % n << "\n";
+		int aux = total / n;
+		while(aux) {
+			if(aux * n <= total or (aux - 1) * (n < aux * n )) {
+				cout << aux << "\n";
+				break;
+			} else {
+				aux--;
+			}
 		}
 	}
 
