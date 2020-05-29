@@ -1,3 +1,6 @@
+// https://codeforces.com/contest/1335/problem/A
+// Time: 30
+
 #include <iostream>
 
 using namespace std;
@@ -11,6 +14,7 @@ int main() {
 		cin >> n;
 
 		n--;
+		// It seems to throw the correct answer but is not efficient.
 		while(n-- > aux++) {
 			distr++;
 		}
