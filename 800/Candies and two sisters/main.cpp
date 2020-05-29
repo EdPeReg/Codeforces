@@ -11,9 +11,7 @@ int main() {
 		cin >> n;
 
 		n--;
-		while(n > aux) {
-			n--;
-			aux++;	
+		while(n-- > aux++) {
 			distr++;
 		}
 		cout << distr << "\n";
