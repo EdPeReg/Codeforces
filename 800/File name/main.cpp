@@ -14,6 +14,5 @@ int main() {
 	}
 
 	cout << numChr << "\n";
-
 	return 0;
 }
