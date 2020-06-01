@@ -1,25 +1,42 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
-	//string abc = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	bool found;
+	string abc = "abcdefghijklmnopqrstuvwxyz";
 	int n;
 	string str;
 	cin >> n;
 	cin >> str;
 
-	//int j = 0;
-	if(n < 26) {
+	if(n < abc.size()) {
 		cout << "NO\n";
 	} else {
-		cout << "YES\n";
-		//for(int i = 0; i < n; i++) {
-			//if(str[i] <= 'z' and str[i] >= 'a'
-			   //or str[i] <= 'Z' and str[i] >= 'A')
-				//cout << j++ << "\n";
+		transform(str.begin(), str.end(), str.begin(), ::tolower);
+
+		for(size_t i = 0; i < abc.size(); i++) {
+			for(size_t j = 0; j < str.size(); j++) {
+				if(abc[i] != str[j]) {
+					found = false;
+				} else {
+					found = true;
+					break;
+				}
+			}
+			if(found == false) {
+				break;
+			}
 		}
+
+		if(found) {
+			cout << "YES\n";
+		} else {
+			cout << "NO\n";
+		}
+	}
 
 	return 0;
 }
