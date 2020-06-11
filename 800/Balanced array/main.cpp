@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/1343/B
-// Time: 30m
+// Time: 60m
 
 #include <iostream>
 #include <vector>
@@ -12,7 +12,7 @@ int main() {
 	cin >> t;
 	
 	while(t--) {
-		int n, sumEven = 0, sumOdd = 0;
+		int n, sumEven = 0, sumOdd = 0, sum = 0, j = 0;
 		cin >> n;
 		int aux = n / 2;
 
@@ -35,17 +35,34 @@ int main() {
 			}
 		}
 
-		cout << sumEven << "\n";
+		for(size_t i = 0; i < aux; i++) {
+			cout << vectEven.at(i) << " ";
+		}
+		cout << "\n";
+		for(size_t i = 0; i < n; i++) {
+			cout << vectOdd.at(i) << " ";
+		}
+
+
+		cout << "\nsum even : " << sumEven << "\n";
 		//cout << sumOdd << "\n";
 
 		/* The idea was to see if the first element of the odd vector
 		 * plus the second element was the same that the sumEven. */
-		for(int i = 0; i < vectOdd.size() - 1; i++) {
-			int sum = vectOdd.at(i) + vectOdd.at(i + 1);
-			if(sum  != sumEven) {
+		//for(size_t i = 0; i < vectOdd.size(); i++) {
+			for(; j < vectOdd.size(); j++) {
+				sum += vectOdd.at(j);
+				cout << "sum: " << sum << " ";
+				if(sum >= sumEven) {
+					j = 1;
+					break;
+				}
+			}
+			//int sum = vectOdd.at(i) + vectOdd.at(i + 1);
+			//if(sum  != sumEven) {
 					
-			}	
-		}
+			//}	
+		//}
 
 	}
 
