@@ -5,6 +5,7 @@
  *
  * |q-p| = distance. */
 
+
 #include <iostream>
 #include <cmath>
 
