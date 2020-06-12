@@ -1,3 +1,10 @@
+// https://codeforces.com/problemset/problem/1285/A
+// Time: 14 min.
+
+/* Basically is to compute the distance in one dimension.
+ *
+ * |q-p| = distance. */
+
 #include <iostream>
 #include <cmath>
 
