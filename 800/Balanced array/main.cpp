@@ -18,8 +18,8 @@ int main() {
 		vectOdd.clear();
 		vectAnswer.clear();
 		bool yes = false;
+		long sumEven = 0, sumOdd = 0;
 		int n;
-		long long sumEven = 0, sumOdd = 0;
 		cin >> n;
 		int aux = n / 2;
 
@@ -49,7 +49,6 @@ int main() {
 
 			if(sumOdd == sumEven) {
 				vectOdd.erase(vectOdd.begin() + i + 1, vectOdd.end());
-				vectAnswer.insert(vectAnswer.end(), vectOdd.begin(), vectOdd.end());
 				yes = true;
 				break;
 			} else if(sumOdd > sumEven) {
@@ -65,6 +64,7 @@ int main() {
 			}
 		}
 
+		vectAnswer.insert(vectAnswer.end(), vectOdd.begin(), vectOdd.end());
 		if(yes and vectOdd.size() == vectEven.size()) {
 			cout << "YES\n";
 			for(size_t i = 0; i < vectAnswer.size(); i++) {
