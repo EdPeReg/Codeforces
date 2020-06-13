@@ -16,7 +16,8 @@ int main() {
 		vectOdd.clear();
 		vectAnswer.clear();
 		bool yes = false;
-		int n, sumEven = 0, sumOdd = 0;
+		int n;
+		long long sumEven = 0, sumOdd = 0;
 		cin >> n;
 		int aux = n / 2;
 
