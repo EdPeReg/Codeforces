@@ -7,18 +7,22 @@
 using namespace std;
 
 int main() {
-	vector<int> vectEven, vectOdd;
+	vector<int> vectEven, vectOdd, vectAnswer;
 	int t;
 	cin >> t;
 	
 	while(t--) {
-		int n, sumEven = 0, sumOdd = 0, sum = 0, j = 0;
+		vectEven.clear();
+		vectOdd.clear();
+		vectAnswer.clear();
+		bool yes = false;
+		int n, sumEven = 0, sumOdd = 0;
 		cin >> n;
 		int aux = n / 2;
 
 		/* The next two for loops it was to have a vector of even numbers
 		 * and a vector of odd numbers. */
-		for(size_t i = 1; i <= aux * 2; i++) {
+		for(int i = 1; i <= aux * 2; i++) {
 			if(i % 2 == 0) {
 				vectEven.push_back(i);
 				sumEven += i;
@@ -28,42 +32,44 @@ int main() {
 		/* Because the even vector remains the same, we need to generate
 		 * an odd vector of n size, to see if the next element will 
 		 * accomplish the sum. */
-		for(size_t i = 1; i <= n * 2; i++) {
+		for(int i = 1; i <= n * 2; i++) {
 			if(i % 2 != 0) {
-				//sumOdd += i;
 				vectOdd.push_back(i);
 			}
 		}
 
-		for(size_t i = 0; i < aux; i++) {
-			cout << vectEven.at(i) << " ";
-		}
-		cout << "\n";
-		for(size_t i = 0; i < n; i++) {
-			cout << vectOdd.at(i) << " ";
-		}
+		vectAnswer.insert(vectAnswer.end(), vectEven.begin(), vectEven.end());
 
+		size_t i = 0;
+		while(i < vectOdd.size()) {
+			sumOdd += vectOdd.at(i);	
 
-		cout << "\nsum even : " << sumEven << "\n";
-		//cout << sumOdd << "\n";
-
-		/* The idea was to see if the first element of the odd vector
-		 * plus the second element was the same that the sumEven. */
-		//for(size_t i = 0; i < vectOdd.size(); i++) {
-			for(; j < vectOdd.size(); j++) {
-				sum += vectOdd.at(j);
-				cout << "sum: " << sum << " ";
-				if(sum >= sumEven) {
-					j = 1;
+			if(sumOdd == sumEven) {
+				vectOdd.erase(vectOdd.begin() + i + 1, vectOdd.end());
+				vectAnswer.insert(vectAnswer.end(), vectOdd.begin(), vectOdd.end());
+				yes = true;
+				break;
+			} else if(sumOdd > sumEven) {
+				if(vectOdd.size() != 1) {
+					vectOdd.erase(vectOdd.begin() + i - 1);
+				} else {
 					break;
 				}
+				i = 0;
+				sumOdd = 0;
+			} else {
+				i++;
 			}
-			//int sum = vectOdd.at(i) + vectOdd.at(i + 1);
-			//if(sum  != sumEven) {
-					
-			//}	
-		//}
+		}
 
+		if(yes and vectOdd.size() == vectEven.size()) {
+			cout << "YES\n";
+			for(size_t i = 0; i < vectAnswer.size(); i++) {
+				cout << vectAnswer[i] << " ";
+			}
+		} else {
+			cout << "NO\n";
+		}
 	}
 
 	return 0;
