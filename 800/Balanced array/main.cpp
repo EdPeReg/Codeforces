@@ -1,5 +1,7 @@
 // https://codeforces.com/problemset/problem/1343/B
-// Time: 60m
+// Time: 2h:35m
+
+// TIME LIMITED EXCEEDED.
 
 #include <iostream>
 #include <vector>
