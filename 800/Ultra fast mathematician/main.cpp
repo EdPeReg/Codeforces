@@ -1,22 +1,24 @@
 // https://codeforces.com/problemset/problem/61/A
-// Time: 30 min.
-
-/* My problem was to think that the xor operation will work correctly 
- * when you enter a binary number, it doesn't work properly. */
+// Time: 49 min.
 
 #include <iostream>
-#include <bitset>
+#include <string>
 
 using namespace std;
 
 int main() {
-	long long a, b, res;
+	string a, b, answer;
 	cin >> a >> b;
-	res = a ^ b;
 	
-	bitset<7> bin(res);
+	for(size_t i = 0; i < a.size(); i++) {
+		if(a.at(i) == b.at(i)) {
+			answer += "0";
+		} else {
+			answer += "1";
+		}
+	}
 
-	cout << res << "\n"; 
+	cout << answer << "\n"; 
 
 	return 0;
 }
