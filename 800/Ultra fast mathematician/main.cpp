@@ -1,6 +1,7 @@
 // https://codeforces.com/problemset/problem/61/A
 // Time: 49 min.
 
+
 #include <iostream>
 #include <string>
 
