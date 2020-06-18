@@ -1,7 +1,6 @@
 // https://codeforces.com/problemset/problem/61/A
 // Time: 49 min.
 
-
 #include <iostream>
 #include <string>
 
@@ -11,6 +10,7 @@ int main() {
 	string a, b, answer;
 	cin >> a >> b;
 	
+	// Basically perfomring xor operation with strings.
 	for(size_t i = 0; i < a.size(); i++) {
 		if(a.at(i) == b.at(i)) {
 			answer += "0";
