@@ -20,25 +20,23 @@ int main() {
 			// Rows that aren't even always has '#'.
 			if(row % 2 != 0) {
 				cout << "#";
-			} else if(!first) {
+			} else if(!first and column == m) {
 				// Print in the last position.
-				if(column == m) {
-					cout << "#";
-					first = true;
-				} else {
-					cout << ".";
-				}
-			} else if(first) {
+				cout << "#";
+				first = true;
+			} else if(first and column == 1) {
 				// Print in the first position.
-				if(column == 1) {
-					cout << "#";
-				} else if(column == m) {
-					cout << ".";
-					first = false;
-				} else {
-					cout << ".";
-				}
+				cout << "#";
 			} 
+			// When we are in the last position, now first is false, if
+			// we say first = false since the beggining, it will print
+			// #.....# 
+			else if(column == m) {
+				cout << ".";
+				first = false;
+			} else {
+				cout << ".";
+			}
 		} 
 		cout << '\n';
 	}
