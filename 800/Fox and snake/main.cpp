@@ -5,6 +5,7 @@
  * '#', the rows that are even has first a '# in the last element, and the
  * next one '#' in the first element and so on. '*/
 
+
 #include <iostream>
 
 using namespace std;
