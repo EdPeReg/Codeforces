@@ -3,7 +3,8 @@
 
 /* Basically, each person will chose the card with the highest number, but
  * they can only chose the card that is to the leftmost or rightmost.
- * Just get the greatest number, delete that card and sum it to its corresponding player. */
+ * Just get the greatest number, delete that card and sum it to its corresponding player. 
+ * What about if it's 10,000,000 cards? doing the operations delete could be a bad idea. */
 
 #include <iostream>
 #include <deque>
