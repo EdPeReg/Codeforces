@@ -3,17 +3,18 @@
 
 /* Basically, each person will chose the card with the highest number, but
  * they can only chose the card that is to the leftmost or rightmost.
- * Just get the greatest number, delete that card and sum it to its corresponding player. 
- * What about if it's 10,000,000 cards? doing the operations delete could be a bad idea. */
+ * For this, you have two "pointers" where will point to the rightmost position and leftmost position,
+ * instead of deleting the greatest card, just increment the leftmost pointer or decrement the rightmost pointer. 
+ * This is good, becase you are avoiding the delete operation. */
 
 #include <iostream>
-#include <deque>
+#include <vector>
 #include <algorithm>
 
 using namespace std;
 
 int main() {
-	deque<int> cards;
+	vector<int> cards;
 	int n, cardNumber;
 	cin >> n;
 
@@ -22,31 +23,31 @@ int main() {
 		cards.push_back(cardNumber);
 	}
 
-	int serejaSum{0}, dimaSum{0};
 	bool serejaTurn{true};
-	while(!cards.empty()) {
-		int leftmost = cards.front();
-		int rightmost = cards.back();
+	int serejaSum{0}, dimaSum{0};
+	int leftmostPos{0};
+	int rightmostPos = cards.size() - 1;
 
-		if(serejaTurn) {
-			if(leftmost > rightmost) {
-				serejaSum += leftmost;
-				cards.erase(cards.begin());
+	while(leftmostPos <= rightmostPos) {
+		if(cards[leftmostPos] > cards[rightmostPos]) {
+			if(serejaTurn) {
+				serejaSum += cards[leftmostPos];
 				serejaTurn = false;
+				leftmostPos++;
 			} else {
-				serejaSum += rightmost;
-				cards.erase(cards.end());
-				serejaTurn = false;
+				dimaSum += cards[leftmostPos];
+				serejaTurn = true;
+				leftmostPos++;
 			}
 		} else {
-			if(leftmost > rightmost) {
-				dimaSum += leftmost;
-				cards.erase(cards.begin());
-				serejaTurn = true;
+			if(serejaTurn) {
+				serejaSum += cards[rightmostPos];
+				serejaTurn = false;
+				rightmostPos--;
 			} else {
-				dimaSum += rightmost;
-				cards.erase(cards.end());
+				dimaSum += cards[rightmostPos];
 				serejaTurn = true;
+				rightmostPos--;
 			}
 		}
 	}
