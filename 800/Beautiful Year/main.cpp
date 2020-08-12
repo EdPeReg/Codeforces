@@ -1,4 +1,5 @@
 // https://codeforces.com/problemset/problem/271/A
+// Time: 34 min.
 
 #include <iostream>
 #include <string>
