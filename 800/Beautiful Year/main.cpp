@@ -7,33 +7,23 @@
 using namespace std; 
 
 int main() {
-	int year, otherYear;
+	int year;
 	cin >> year;
-	otherYear = year;
-	++otherYear;
 
 	while(true) {
-		bool isEqual = false;
-		std::string strYear = std::to_string(otherYear);
-		for(size_t leftPos = 0; leftPos < strYear.size(); leftPos++) {
-			for(size_t nextPos = leftPos + 1; nextPos < strYear.size(); nextPos++) {
-				if(strYear.at(leftPos) == strYear.at(nextPos)) {
-					++otherYear;
-					isEqual = true;
-					break;
-				} else {
-					isEqual = false;
-				}
-			}
-			if(isEqual) {
-				break;
-			}
-		}
-		if(!isEqual) {
+		++year;
+
+		int firstDigit = year / 1000;
+		int secondDigit = year / 100 % 10;
+		int thirdDigit = year / 10 % 10;
+		int fourthDigit = year % 10;
+
+		if(firstDigit != secondDigit and firstDigit != thirdDigit and firstDigit != fourthDigit
+				and secondDigit != thirdDigit and secondDigit != fourthDigit and thirdDigit != fourthDigit) {
 			break;
 		}
 	}
+	cout << year;
 
-	cout << otherYear << '\n';
 	return 0;
 }
