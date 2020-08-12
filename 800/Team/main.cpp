@@ -1,4 +1,5 @@
 // https://www.google.com/search?channel=fs&client=ubuntu&q=stopwatch
+// Time: 8 minutes.
 
 #include <iostream>
 
@@ -19,6 +20,5 @@ int main() {
 	}
 
 	cout << numberProblemsSolved;
-
 	return 0;
 }
