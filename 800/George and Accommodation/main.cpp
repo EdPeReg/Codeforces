@@ -13,7 +13,7 @@ int main() {
 		int p, q;
 		cin >> p >> q;
 
-		if(p < q) {
+		if((p < q) and ((q - p) > 2)) {
 			++total;
 		}
 	}
