@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/116/A
-// Time: 23 min.
+// Time: 30 min.
 
 #include <iostream>
 
@@ -11,13 +11,15 @@ int main() {
 
 	int total = 0;
 	int max = 0;
+	bool firstTime = true;
 	while(stops--) {
 		int out, in;
 		cin >> out >> in;
 		
-		if(total == 0) {
+		if(firstTime) {
 			total = in;
 			max = total;
+			firstTime = false;
 		} else {
 			total = total - out + in;
 			if(total > max) {
