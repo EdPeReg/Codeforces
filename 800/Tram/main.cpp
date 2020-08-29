@@ -24,8 +24,8 @@ int main() {
 			firstTime = false;
 		} else {
 			// After that first stop, each stop we save how many people were in the tram,
-			// the maximum amount of people that were in the tram, are the maximum amount of
-			// tram's capacity.
+			// the maximum amount of people that were in the tram in each stop, are the 
+			// maximum amount of tram's capacity.
 			total = total - out + in;
 			if(total > max) {
 				max = total;
