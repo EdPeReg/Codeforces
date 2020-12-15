@@ -24,8 +24,7 @@ int main() {
 	while(t--) {
 		std::cin >> b;
 		// Add the first two letters.
-		std::string aux = b.substr(0,2);
-		a.append(aux);
+		a = b.substr(0,2);
 
 		// Every two characters, get the correct character.
 		for(size_t i = 3; i < b.size(); i += 2) {
