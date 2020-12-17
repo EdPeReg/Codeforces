@@ -1,3 +1,6 @@
+// https://codeforces.com/problemset/problem/1325/A
+// Time 30m
+
 #include <iostream>
 
 int gcd(int a, int b) {
@@ -18,8 +21,9 @@ int main() {
 		bool find = false;
 		std::cin >> x;
 
+		// NOT EFFICIENT.
 		for(int i = 1; i < x; ++i) {
-			for(int j = 1; j < x; ++j) {
+			for(int j = 1; j <= (x/2); ++j) {
 				if(gcd(i,j) + lcm(i,j) == x) {
 					std::cout << i << " " << j << '\n';
 					find = true;
