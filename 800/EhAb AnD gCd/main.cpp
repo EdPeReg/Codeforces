@@ -22,7 +22,7 @@ int main() {
 		bool find = false;
 		std::cin >> x;
 
-		// NOT EFFICIENT.
+		// NOT EFFICIENT. FIND ANOTHER WAY.
 		for(int i = 1; i <= x; ++i) {
 			for(int j = 1; j <= sqrt(x); ++j) {
 				if(gcd(i,j) + lcm(i,j) == x) {
