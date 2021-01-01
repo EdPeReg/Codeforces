@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/1369/A
-// Time: 22 min.
+// Time: 35 min.
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ int main() {
 	while(t--) {
 		size_t n;
 		std::cin >> n;
-		if(n >= 4) {
+		if(n % 4 == 0) {
 			std::cout << "YES\n";
 		} else {
 			std::cout << "NO\n";
