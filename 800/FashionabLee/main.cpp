@@ -10,10 +10,10 @@
 
 int main() {
 	int t;
+	size_t n;
 	std::cin >> t;
 
 	while(t--) {
-		size_t n;
 		std::cin >> n;
 		if(n % 4 == 0) {
 			std::cout << "YES\n";
