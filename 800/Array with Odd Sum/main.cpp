@@ -23,12 +23,10 @@ int main() {
 			sum += n;
 		}
 
-		if(sum % 2 == 1) {
+		if(sum % 2 == 1 or even == odd) {
 			cout << "YES\n";
-		} else if(even != odd) {
-			cout << "NO\n";
 		} else {
-			cout << "YES\n";
+			cout << "NO\n";
 		}
 	}
 
