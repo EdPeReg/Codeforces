@@ -2,13 +2,10 @@
 // Time: 1h:30m.
 
 #include <iostream>
-#include <vector>
-#include <numeric>
 
 using namespace std;
 
 int main() {
-	vector<int> vect;
 	int t, x, n;
 	cin >> t;
 
@@ -23,9 +20,9 @@ int main() {
 			} else if(n % 2 == 0) {
 				even = true;
 			}
-			vect.push_back(n);
+			sum += n;
 		}
-		sum = accumulate(vect.begin(), vect.end(), 0);
+
 		if(sum % 2 == 1) {
 			cout << "YES\n";
 		} else if(even != odd) {
@@ -33,7 +30,6 @@ int main() {
 		} else {
 			cout << "YES\n";
 		}
-		vect.clear();
 	}
 
 	return 0;
