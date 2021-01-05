@@ -16,7 +16,7 @@ int main() {
 			cin >> n;
 			sum += n;
 		}
-		if(sum % 2) {
+		if(sum % 2 == 0) {
 			cout << "YES\n";
 		} else {
 			cout << "NO\n";
