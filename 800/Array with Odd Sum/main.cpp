@@ -1,8 +1,9 @@
 // https://codeforces.com/problemset/problem/1296/A
-// Time: 11 min.
+// Time: 1h:30m.
 
 #include <iostream>
 #include <vector>
+#include <numeric>
 
 using namespace std;
 
@@ -12,30 +13,25 @@ int main() {
 	cin >> t;
 
 	while(t--) {
+		int sum = 0;
 		cin >> x;
+		bool even = false, odd = false;
 		for(int i = 0; i < x; ++i) {
 			cin >> n;
+			if(n % 2 == 1) {
+				odd = true;
+			} else if(n % 2 == 0) {
+				even = true;
+			}
 			vect.push_back(n);
 		}
-
-		int j = 0;
-		bool find = false;
-		for(int i = 0; i < x; ++i) {
-			for(int j = 1; j < x; ++j) {
-				if((vect.at(i) + vect.at(j)) % 2 == 1) {
-					cout << "YES\n";
-					find = true;
-					break;
-				} else {
-					find = false;
-				}
-			}
-			if(find) {
-				break;
-			}
-		}
-		if(!find) {
+		sum = accumulate(vect.begin(), vect.end(), 0);
+		if(sum % 2 == 1) {
+			cout << "YES\n";
+		} else if(even != odd) {
 			cout << "NO\n";
+		} else {
+			cout << "YES\n";
 		}
 		vect.clear();
 	}
