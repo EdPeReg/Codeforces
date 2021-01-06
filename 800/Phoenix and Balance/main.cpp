@@ -1,8 +1,16 @@
 // https://codeforces.com/problemset/problem/1348/A
 // Time: 50 min.
 
+/* 
+ * Basically here we didn't use arrays, I used arrays in the previous version
+ * to store them and get the information, also to traverse the arrays and do the 
+ * proper operations. Is not necessary to do that, we can sum up all the elements.
+ *
+ * There is not necessary for the function call pow(), because 1 << n do the same work
+ * and is less efficient.
+ * */
+
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -12,28 +20,20 @@ int main() {
 
 	while(t--) {
 		cin >> n;
-		int weights[n];
-		int a[n];
-		int b[n];
-		int sum_a = 0, sum_b = 0;
+		
+		// 1 << n = 2^n
+		// We put already the largest coin into our pile.
+		int sum_a = (1 << n);
+		int sum_b = 0;
 
-		int aux = 1;
-		for(int i = 0; i < n; ++i) {
-			weights[i] = pow(2,aux++);
-		}
-
-		a[0] = weights[n-1];
+		// Now we insert the smallest coins using n/2-1.
 		for(int i = 1; i < n/2; ++i) {
-			a[i] = weights[i-1];
+			sum_a += (1 << i);
 		}
-		for(int i = n/2-1; i < n-1; ++i) {
-			b[i] = weights[i];
-		}
-		for(int i = 0; i < n/2; ++i) {
-			sum_a += a[i];
-		}
-		for(int i = n/2-1; i < n-1; ++i) {
-			sum_b += b[i];
+
+		// Insert the remaining coins to the other pile with n/2.
+		for(int i = n/2; i < n; ++i) {
+			sum_b += (1 << i);
 		}
 		cout << sum_a - sum_b << '\n';
 	}
