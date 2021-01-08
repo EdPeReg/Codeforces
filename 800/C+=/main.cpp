@@ -1,6 +1,11 @@
 // https://codeforces.com/problemset/problem/1368/A
 // Time 1h.
 
+/*
+ * Just take the less number of a and b and do the proper operation.
+ *
+ * */
+
 #include <iostream>
 
 using namespace std;
