@@ -12,14 +12,14 @@ int main() {
 	while(t--) {
 		cin >> a >> b >> n;
 		int steps = 0;
-		while(true) {
+		// Any of the two numbers can be the greater.
+		while(a <= n and b <= n) {
 			if(a < b) {
 				a += b;
 			} else {
 				b += a;
 			}
 			++steps;
-			if(a > n or b > n) break;
 		}
 		cout << steps << '\n';
 	}
