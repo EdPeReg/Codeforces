@@ -15,7 +15,7 @@ int main() {
 			std::cout << 0 << '\n';
 		} else {
 			while(true) {
-				if(a++ % b != 0) {
+				if(a++ % b) {
 					++total;
 				} else {
 					std::cout << total << '\n';
