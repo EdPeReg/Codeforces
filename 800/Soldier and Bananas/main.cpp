@@ -12,7 +12,12 @@ int main() {
 	for(int i = 1; i <= w; ++i) {
 		sum += i * k;
 	}
-	cout << sum - n << '\n';
+
+	if(sum-n < 0) {
+		cout << 0 << '\n'
+	} else {
+		cout << sum - n << '\n';
+	}
 
 	return 0;
 }
