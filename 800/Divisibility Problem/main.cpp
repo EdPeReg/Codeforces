@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/1328/A
-// Time: 10m.
+// Time: 30m.
 
 #include <iostream>
 
