@@ -14,7 +14,7 @@ int main() {
 	}
 
 	if(sum-n < 0) {
-		cout << 0 << '\n'
+		cout << 0 << '\n';
 	} else {
 		cout << sum - n << '\n';
 	}
