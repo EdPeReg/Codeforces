@@ -8,20 +8,11 @@ int main() {
 	std::cin >> t;
 
 	while(t--) {
-		int total = 0;
 		std::cin >> a >> b;
-
-		if(a % b == 0) {
-			std::cout << 0 << '\n';
+		if(a % b) {
+			std::cout << b - a % b << '\n';
 		} else {
-			while(true) {
-				if(a++ % b) {
-					++total;
-				} else {
-					std::cout << total << '\n';
-					break;
-				}
-			}
+			std::cout << 0 << '\n';
 		}
 	}
 
