@@ -13,10 +13,10 @@ int main() {
 		sum += i * k;
 	}
 
-	if(sum-n < 0) {
-		cout << 0 << '\n';
-	} else {
+	if(sum >= n) {
 		cout << sum - n << '\n';
+	} else {
+		cout << 0 << '\n';
 	}
 
 	return 0;
