@@ -13,6 +13,7 @@ int main() {
 	int size = user.size();
 	for(int i = 0; i < size; ++i) {
 		for(int j = i+1; j < size; ++j) {
+			// Only the first match.
 			if(user.at(i) == user.at(j)) {
 				++total;
 				break;
