@@ -2,37 +2,24 @@
 // Time 1h.
 
 #include <iostream>
-#include <cctype>
-
-void convert(std::string& a) {
-	for(int i = 0; i < a.size(); ++i) {
-		if(std::isupper(a.at(i))) {
-			a[i] = a[i] + 32;
-		}
-	}
-}
 
 int main() {
 	std::string a, b;
 	std::cin >> a >> b;
-	
-	convert(a);
-	convert(b);
+
+	for(int i = 0; i < a.size(); ++i) {
+		if(a.at(i) < 97) 
+			a.at(i) += 32;
+		if(b.at(i) < 97) 
+			b.at(i) += 32;
+	}
 
 	if(a == b) {
 		std::cout << 0 << '\n';
+	} else if(a < b){
+		std::cout << -1 << '\n';
 	} else {
-		int j = 0;
-		for(int i = 0; i < a.size(); ++i) {
-			if(a.at(i) < b.at(j)) {
-				std::cout << -1 << '\n';
-				break;
-			} else if(a.at(i) > b.at(j)){
-				std::cout << 1 << '\n';
-				break;
-			} 
-			++j;
-		}
+		std::cout << 1 << '\n';
 	}
 
 	return 0;
