@@ -27,6 +27,7 @@ int main() {
 	}
 
 	int moves = 0;
+	// [2][2] is our middle.
 	while(i1 != 2 or j1 != 2) {
 		if(i1 > 2) {
 			--i1;
