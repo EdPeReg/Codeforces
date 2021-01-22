@@ -1,4 +1,8 @@
+// https://codeforces.com/problemset/problem/1399/B
+// Time: 30 min.
+
 #include <iostream>
+#include <vector>
 #include <algorithm>
 
 using namespace std;
@@ -11,18 +15,14 @@ int main() {
 		int n;
 		long long sum = 0;
 		cin >> n;
-		int c[n], o[n];
+		vector<int> c(n);
+		vector<int> o(n);
+
+		for(auto& e : c) cin >> e;
+		for(auto& e : o) cin >> e;
 
 		for(int i = 0; i < n; ++i) {
-			cin >> c[i];
-		}
-
-		for(int i = 0; i < n; ++i) {
-			cin >> o[i];
-		}
-
-		for(int i = 0; i < n; ++i) {
-			sum += max(c[i] - *min_element(c,c+n), o[i] - *min_element(o,o+n));
+			sum += max(c[i] - *min_element(c.begin(),c.end()), o[i] - *min_element(o.begin(),o.end()));
 		}
 		cout << sum << '\n';
 	}
