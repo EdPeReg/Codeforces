@@ -9,7 +9,7 @@ int main() {
 
 	while(t--) {
 		int n;
-		size_t sum = 0;
+		long long sum = 0;
 		cin >> n;
 		int c[n], o[n];
 
