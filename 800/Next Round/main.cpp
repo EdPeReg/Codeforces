@@ -10,7 +10,7 @@ int main() {
 	for(int& e : arr) cin >> e;
 
 	for(int i = 0; i < n; ++i) {
-		if(arr[i] >= arr[k] and arr[i] > 0) ++sum;
+		if(arr[i] >= arr[k-1] and arr[i] > 0) ++sum;
 	}
 	cout << sum << '\n';
 
