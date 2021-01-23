@@ -1,3 +1,6 @@
+// https://codeforces.com/contest/158/problem/A
+// Time 1h. READ WELL.
+
 #include <iostream>
 
 using namespace std;
