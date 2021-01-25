@@ -1,3 +1,6 @@
+// https://codeforces.com/problemset/problem/282/A
+// Time. 10m
+
 #include <iostream>
 #include <string>
 
