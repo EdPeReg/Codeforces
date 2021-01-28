@@ -14,12 +14,10 @@ int main() {
 		else ++lower;
 	}
 
-	if((upper == lower) or upper < lower) {
-		for(auto& c : str) {
+	for(auto& c : str) {
+		if((upper == lower) or upper < lower) {
 			if(isupper(c)) c += 32;
-		}
-	} else {
-		for(auto& c : str) {
+		} else {
 			if(islower(c)) c -= 32;
 		}
 	}
