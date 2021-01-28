@@ -13,15 +13,15 @@ int main() {
 
 	if(upper == lower) {
 		for(auto& c : str) {
-			if(!islower(c)) c += 32;
+			if(isupper(c)) c += 32;
 		}
 	} else if(upper < lower) {
 		for(auto& c : str) {
-			if(!islower(c)) c += 32;
+			if(isupper(c)) c += 32;
 		}
 	} else {
 		for(auto& c : str) {
-			if(!isupper(c)) c += 32;
+			if(islower(c)) c -= 32;
 		}
 	}
 	std::cout << str << '\n';
