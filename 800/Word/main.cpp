@@ -14,11 +14,7 @@ int main() {
 		else ++lower;
 	}
 
-	if(upper == lower) {
-		for(auto& c : str) {
-			if(isupper(c)) c += 32;
-		}
-	} else if(upper < lower) {
+	if((upper == lower) or upper < lower) {
 		for(auto& c : str) {
 			if(isupper(c)) c += 32;
 		}
