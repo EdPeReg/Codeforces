@@ -1,3 +1,6 @@
+//https://codeforces.com/problemset/problem/59/A
+// Time: 30m.
+
 #include <iostream>
 #include <cctype>
 
