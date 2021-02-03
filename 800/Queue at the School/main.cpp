@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/266/B
-// Time: FUCK.
+// Time: FUCK :).
 
 #include <iostream>
 
