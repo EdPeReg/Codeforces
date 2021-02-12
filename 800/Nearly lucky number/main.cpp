@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	size_t n, cont = 0;
+	unsigned long long n, cont = 0;
 	cin >> n;
 
 	while(n != 0) {
