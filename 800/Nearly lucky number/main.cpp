@@ -1,5 +1,5 @@
 // https://codeforces.com/problemset/problem/110/A
-// Time: 36 min.
+// Time: 60 min.
 // Second try.
 
 #include <iostream>
