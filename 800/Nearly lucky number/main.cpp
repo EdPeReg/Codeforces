@@ -3,32 +3,18 @@
 // Second try.
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
-	bool isFour = false, isSeven = false;
-	string n;
+	size_t n, cont = 0;
 	cin >> n;
 
-	for(int i = 0; i < n.size(); i++) {
-		if(n.at(i) == '4') { 
-			isFour = true; 
-			continue;
-		}
-		if(n.at(i) == '7') { 
-			isSeven = true;
-		    continue;	
-		}
-		break;
+	while(n != 0) {
+		if(n % 10 == 4 or n % 10 == 7) ++cont;
+		n /= 10;
 	}
 
-	if(isFour and isSeven) {
-		cout << "YES\n";
-	} else {
-		cout << "NO\n";
-	}
-
-	return 0;
+	if(cont == 4 or cont == 7) cout << "YES\n";
+	else cout << "NO\n";
 }
