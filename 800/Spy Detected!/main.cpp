@@ -2,35 +2,29 @@
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <map>
 
 int main() {
-    int t, n, a;
+    int t, n;
     std::cin >> t;
 
     while(t--) {
         std::cin >> n;
         
         std::vector<int> v(n);
-        for(int i = 0; i < n; ++i) {
-            std::cin >> v[i]; 
+        std::map<int, int> pair;
+
+        for(int& elem : v) {
+            std::cin >> elem;
+            pair[elem]++;       // Increase by 1 in this element.
         }
         
-        int index = 0;
-        for(int i = 0; i < n - 1; ++i) {
-            if(v[i] != v[i+1]) {
-                index = i;
+        for(int i = 0; i < n; ++i) {
+            // If this number in the vector has only 1 element.
+            if(pair[v[i]] == 1) {
+                std::cout << i + 1 << '\n';
                 break;
             }
-        }
-
-        // We have multiple numbers that aren't intruders.
-        if(std::count(v.begin(), v.end(), v[index]) > 1) {
-            std::cout << index + 2 << '\n';
-        } 
-        // When the is the first one, only add 1.
-        else {
-            std::cout << index + 1 << '\n';
         }
     }
 }
